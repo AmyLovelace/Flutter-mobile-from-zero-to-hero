@@ -6,7 +6,10 @@ void main(){
   final abilities =['bakes'];//tipo de dato inferido por su inicializacion
   final sprites = <String>['ditto/front.png','ditto/back.png'];
     
-  
+  dynamic errorMessage = 'wow';//permite que se pueda "setear" el tipo de dato de manera dinamica
+    //dynamic puede ser nulo
+
+  errorMessage = false;
   
   print("""
   $name
@@ -14,6 +17,7 @@ void main(){
   $isAlive
   $abilities
   $sprites
+  $errorMessage
   
   """);
   
