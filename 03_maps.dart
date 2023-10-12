@@ -20,6 +20,8 @@ void main(){
   print('Sprites: ${pokemon['sprites'] }');
   print('Back: ${pokemon['sprites'][2] }');
   print('Front: ${pokemon['sprites'][1] }');
+  print('Name: ${pokemon['name'] }');
+
 
 
 
