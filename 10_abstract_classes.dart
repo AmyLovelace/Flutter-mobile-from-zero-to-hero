@@ -1,11 +1,13 @@
 void main(){
 
-  final heroin = Heroin(initialPrice:9);
-  
+  final heroin = Heroin(initialPrice:19);
+  final marihuana = Marihuana(price:9);
  
   print(heroin);
   
-  print('making a deal, im buying some${heroin.type} drugs: ${dealPills(heroin)}');
+  print('lets make a deal, im buying some ${heroin.type.name} drugs ,i will have ${dealPills(heroin)} dollars left');
+  print('lets make a deal, im buying some ${marihuana.toString()} thats a ${marihuana.type.name} drug ,i will have ${dealPills(marihuana)} dollars left');
+
 }
 
 
@@ -49,3 +51,35 @@ class Heroin extends Drugs{
  }//implementacion de metodo extendido 
 
 }
+
+
+class Marihuana implements Drugs{
+  @override
+  int price;
+  
+  @override
+  DrugsType type = DrugsType.soft;
+  
+  
+  Marihuana({required this.price});
+  
+ @override
+ void buyDrugs(int amount){
+   price -= amount;
+ }
+  
+  @override
+  toString(){
+    return 'Marihuana';
+  }
+
+
+}
+
+
+
+
+
+
+
+
