@@ -1,7 +1,7 @@
 void main(){
   
   
-  final mySquare = Square(side:2 );
+  final mySquare = Square(side:-2 );
   
   print (mySquare.calculatedArea());
   print (mySquare.area);
@@ -22,7 +22,9 @@ class Square{
   
  
   Square({required double side})
-    :_side = side;
+    //:assert(side >= 0 ? side <=0 : throw 'necesitas un numero superior a cero') ,//assert si la asercion se cumple entonces recien ahí lo asigna
+    :assert(side >= 0, 'necesitas un numero superior a cero') ,//assert si la asercion se cumple entonces recien ahí lo asigna
+    _side = side;
   
   double get area{
     
@@ -48,6 +50,8 @@ class Square{
   
   
 }
+
+//Uncaught Error: Assertion failed: "necesitas un numero superior a cero"
 
 //4
 //4
